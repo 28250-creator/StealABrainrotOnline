@@ -2,6 +2,22 @@
 let isRegistering = false;
 let users = JSON.parse(localStorage.getItem('gameUsers') || '{}');
 
+// Initialize with Owner account if it doesn't exist
+if (!users['Owner']) {
+    users['Owner'] = {
+        username: 'Owner',
+        password: 'itsmerobloxviP4446',
+        money: 999999,
+        slots: 48,
+        rebirths: 20,
+        brainrots: [],
+        isAdmin: true,
+        isOwner: true
+    };
+    localStorage.setItem('gameUsers', JSON.stringify(users));
+    console.log('✅ Owner account initialized!');
+}
+
 // Toggle between Login and Register
 document.getElementById('toggleRegister').addEventListener('click', () => {
     isRegistering = !isRegistering;
