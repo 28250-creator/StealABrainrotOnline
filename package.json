@@ -1,0 +1,24 @@
+{
+  "name": "steal-a-brainrot-online",
+  "version": "1.0.0",
+  "description": "A 3D online tycoon game - Steal a Brainrot Online",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "keywords": ["game", "tycoon", "3d", "multiplayer"],
+  "author": "28250-creator",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1",
+    "mongoose": "^7.0.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
